@@ -1,0 +1,75 @@
+﻿@model IEnumerable<GeneralAccount.Models.JOU_1997>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="row form-group col col-md-12">
+        <div class="form-group col col-md-5">
+            @Html.Label("Currency", htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-8">
+                @Html.TextBox("ssss", "", new { @class = "form-control dropdown-toggle", disabled = "disabled" })
+            </div>
+        </div>
+        <div class="form-group col col-md-5">
+            @Html.Label("Deal Id", htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-8">
+                @Html.TextBox("ssss", "", new { @class = "form-control dropdown-toggle", disabled = "disabled" })
+            </div>
+        </div>
+    </div>
+    <div class="row form-group col col-md-12">
+        <div class="form-group col col-md-5">
+            @Html.Label("Value Date", htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-8">
+                @Html.TextBox("ssss", "", new { @class = "form-control dropdown-toggle", disabled = "disabled" })
+            </div>
+        </div>
+        <div class="form-group col col-md-5">
+            @Html.Label("Group", htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-8">
+                @Html.TextBox("ssss", "", new { @class = "form-control dropdown-toggle", disabled = "disabled" })
+            </div>
+        </div>
+    </div>
+    <div class="row form-group col col-md-12">
+        <div class="form-group col col-md-5">
+            @Html.Label("Fees", htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-8">
+                @Html.TextBox("ssss", "", new { @class = "form-control dropdown-toggle", disabled = "disabled" })
+            </div>
+        </div>
+        <div class="form-group col col-md-5">
+            @Html.Label("Group", htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-8">
+                @Html.TextBox("ssss", "", new { @class = "form-control dropdown-toggle", disabled = "disabled" })
+            </div>
+        </div>
+    </div>
+    <div class="row form-group col col-md-12">
+        <div class="form-group col col-md-5">
+            @Html.Label("Fees", htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-8">
+                @Html.TextBox("ssss", "", new { @class = "form-control dropdown-toggle", disabled = "disabled" })
+            </div>
+        </div>
+        <div class="form-group col col-md-5">
+            @Html.Label("Group", htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-8">
+                @Html.TextBox("ssss", "", new { @class = "form-control dropdown-toggle", disabled = "disabled" })
+            </div>
+        </div>
+    </div>
+</div>
+}
+
+
+
+

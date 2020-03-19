@@ -1,0 +1,83 @@
+﻿@model IPagedList<GeneralAccount.Models.ACC_ALL2>
+@using PagedList;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    th {
+        text-align: center;
+    }
+
+    td {
+        text-align: center;
+        font-size: large;
+    }
+</style>
+<h2>Index</h2>
+<p>
+    @Html.ActionLink("Create New", "Create_Check_Code")
+</p>
+<p>
+    @Html.ActionLink("SearchByName", "SearchByName")
+</p>
+<p>
+    @Html.ActionLink("SearchByCode", "SearchByCode")
+</p>
+<p>
+    @Html.ActionLink("SearchByLevel", "SearchByLevel")
+</p>
+
+<table class="table table-striped table-bordered table-hover" style="width:100%">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.First().Account_Level)</th>
+            <th>@Html.DisplayNameFor(model => model.First().NAME)</th>
+            <th>@Html.DisplayNameFor(model => model.First().CODE)</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                <td>No Match Data ....</td>
+            </tr>
+        }
+        else
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Account_Level)</td>
+                    <td>@Html.DisplayFor(modelItem => item.NAME)</td>
+                    <td>@Html.DisplayFor(modelItem => item.CODE)</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { code = item.CODE }) |
+                        @Html.ActionLink("Details", "Details", new { code = item.CODE }) |
+                        @Html.ActionLink("Delete", "Delete", new { code = item.CODE })
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+
+    </script>
+}
+<div style="text-align:center">
+    @Html.PagedListPager(Model, i => Url.Action("Index", "ACC_ALL2", new { i }))
+</div>
+
+<div class="form-group col-md-12">
+    <div class="btn-group col-md-12" role="group" aria-label="Basic example">
+        <a href="~/SpecialFees/SpecialFees/Create" class="btn btn-outline-primary"><i class="fa fa-plus"></i> Add New</a>
+        <a href="~/SpecialFees/SpecialFees/Index" class="btn btn-outline-primary"><i class="fa fa-home"></i> Back to Home</a>
+    </div>
+</div>
+
+

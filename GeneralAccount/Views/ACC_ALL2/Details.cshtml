@@ -1,0 +1,338 @@
+﻿@model GeneralAccount.Models.ACC_ALL2
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ACC_ALL2</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BSPL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BSPL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TYPE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TYPE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BALANCE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BALANCE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATUS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Account_Level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Account_Level)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.entry_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.entry_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INPUTER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INPUTER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAME_ARB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAME_ARB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.liq_bal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.liq_bal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name_eng)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name_eng)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LIQ_DR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LIQ_DR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LIQ_CR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LIQ_CR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SORTBY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SORTBY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FLAG_TR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FLAG_TR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CURR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CURR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACCHEAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACCHEAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACCTYPE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACCTYPE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.reportname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.reportname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CHK_NAV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHK_NAV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bank_flag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bank_flag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cs_1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cs_1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cs_2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cs_2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.drcr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.drcr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.s_type_____)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_type_____)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Swift_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Swift_Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BANK_REUTER_CODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BANK_REUTER_CODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BANK_CORESPONDENE_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BANK_CORESPONDENE_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BANK_CORESPONDENE_BIC_CODE_SWIFT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BANK_CORESPONDENE_BIC_CODE_SWIFT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACCOUNT_NUM_OF_BANK_AT_CORESPONDENE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACCOUNT_NUM_OF_BANK_AT_CORESPONDENE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BANK_INTERMEDIARY_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BANK_INTERMEDIARY_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BANK_INTERMEDIARY_BIC_CODE_SWIFT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BANK_INTERMEDIARY_BIC_CODE_SWIFT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACCOUNT_NUM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACCOUNT_NUM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GENERAL_SUB_LEGER_ACC_NUM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GENERAL_SUB_LEGER_ACC_NUM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Uid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sector)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sector)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Refrence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Refrence)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CODE }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

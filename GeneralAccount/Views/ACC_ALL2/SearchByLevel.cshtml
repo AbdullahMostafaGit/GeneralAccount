@@ -1,0 +1,157 @@
+﻿@model IPagedList<GeneralAccount.Models.ACC_ALL2>
+@using PagedList;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "SearchByLevel";
+}
+
+<h2>SearchByLevel</h2>
+
+@using(Html.BeginForm("SearchByLevel", "ACC_ALL2", FormMethod.Get)){
+
+<select class="form-control" name="AccountLevel">
+
+    <option style="font-size:large">One</option>
+    <option style="font-size:large">Two</option>
+    <option style="font-size:large">Three</option>
+    <option style="font-size:large">Four</option>
+</select>
+<input type="submit" value="Select-Level" />
+
+}
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.First().Account_Level)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().NAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().CODE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().liq_bal)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.First().LIQ_DR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().LIQ_CR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().FLAG_TR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().FL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().SORTBY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().s_type_____)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().CHK_NAV)
+            </th>
+
+
+
+
+
+
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @if (Model.Count() == 0)
+        {
+
+            <tr>
+                <td>
+                    No Match Data ...
+                </td>
+            </tr>
+        }
+        else
+        {
+
+
+            foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Account_Level)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NAME)
+                    </td>
+
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CODE)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.liq_bal)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LIQ_DR)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LIQ_CR)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FLAG_TR)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FL)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SORTBY)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.s_type_____)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CHK_NAV)
+                    </td>
+
+
+
+
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { code = item.CODE }) |
+                        @Html.ActionLink("Details", "Details", new { code = item.CODE }) |
+                        @Html.ActionLink("Delete", "Delete", new { code = item.CODE })
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+
+    </script>
+
+}
+    <div class="alert-info" style="text-align:center">
+        @Html.PagedListPager(Model, i => Url.Action("SearchByLevel", "ACC_ALL2", new { i, AccountLevel = Request.QueryString["AccountLevel"] }))
+    </div>
+<p>
+    @Html.ActionLink("Create New", "Create_Check_Code")
+</p>
+<p>
+    @Html.ActionLink("Back To List", "Index")
+</p>
+
